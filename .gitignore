@@ -1,0 +1,9 @@
+/.idea/**
+/backEnd/gradle/wrapper/gradle-wrapper.jar
+/backEnd/gradle/wrapper/gradle-wrapper.properties
+/backEnd/gradlew
+/backEnd/gradlew.bat
+/backEnd/settings.gradle
+/backEnd/.gradle/**
+/backEnd/build/**
+/backEnd/HELP.md
