@@ -1,62 +1,40 @@
-import Head from 'next/head'
+import Head from "next/head";
+
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>NOSTRESS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className="title">Welcome to NOSTRESS!</h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          스트레스는 만병의 근원! 아무 생각 없이 끄적여보는 걸 추천드립니다.
         </p>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="main--content">
+          <p className="main--content__imoji">&#x1F64B;</p>
+          <p className="main--content__text">
+            <a href="#" rel="noopener noreferrer">
+              <span>로그인하고 끄적이러 가기</span>
+              <span className="main--content__icon">
+                <ArrowForwardIcon
+                  fontSize="large"
+                  style={{ verticalAlign: "text-bottom" }}
+                />
+              </span>
+            </a>
+          </p>
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
+        <p>COPYRIGHT ⓒ 2022 NOSTRESS ALL RIGHTS RESERVED.</p>
       </footer>
 
       <style jsx>{`
@@ -76,6 +54,30 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .main--content {
+          text-align: center;
+        }
+
+        .main--content__imoji {
+          font-size: 12rem;
+          margin: 0;
+        }
+
+        .main--content__text {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        .main--content__icon {
+          display: inline-block;
+          transform: translateX(0);
+          transition: all 0.4s;
+        }
+
+        .main--content__text:hover .main--content__icon {
+          transform: translateX(12px);
         }
 
         footer {
@@ -127,6 +129,7 @@ export default function Home() {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+          word-break: keep-all;
         }
 
         code {
@@ -205,5 +208,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
