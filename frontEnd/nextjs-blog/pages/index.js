@@ -68,6 +68,9 @@ export default function Home() {
         }
 
         .home--container {
+          padding: 2rem 2.5rem;
+          background: rgba(255, 255, 255, 0.85);
+          border-radius: 12px;
         }
 
         .home--bg {
@@ -78,7 +81,6 @@ export default function Home() {
           height: 100%;
           background: center / contain no-repeat url("/img/home_background.png");
           z-index: -1;
-          opacity: 0.5;
         }
 
         main {
@@ -122,6 +124,7 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
+          background: rgba(255, 255, 255, 0.85);
         }
 
         footer img {
